@@ -2,13 +2,22 @@ from django.db import models
 
 # Create your models here.
 
+electronics = (('ph', 'phones'), ('tab', 'tablets'), ('acc', 'accessories'))
+vehicles = (('ca', 'cars'), ('cyc', 'motorcycles'))
+fashion = (("me", "men's"), ("wo", "women's"))
+home_appliance = (('coo', 'cookers'), ('fa', 'fans'))
+
+
+cat = (('electonics', electronics), ('vehicle', vehicles), ('fashion', fashion), ('home appliance', home_appliance))
+
 
 class Product(models.Model):
-    choice = (('ele', 'electronics'), ('car', 'cars'), ('fsh', 'fashion'), ('sprt', 'sport'), ('home', 'home_appliance'))
     name = models.CharField(max_length=200)
     description = models.TextField()
     image = models.ImageField(upload_to='products/%Y/$m/$d', blank=True)
-    category = models.CharField(max_length=10, choices=choice)
+    catalogue = models.CharField(max_length=10, choices=cat, null=True)
 
     def __str__(self):
         return self.name
+
+

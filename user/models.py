@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 
+from store.models import Product
 
 class User(models.Model):
     first_name = models.CharField(max_length=20)
