@@ -30,6 +30,8 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+SOCIAL_AUTH_FIELDS_STORED_IN_SESSION = ['key']
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
