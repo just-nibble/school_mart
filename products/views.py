@@ -1,9 +1,12 @@
 from django.shortcuts import render
+from .models import Product
 
 # Create your views here.
+from .forms import ProductCreateForm
 
 
-from products.models import Product
+def productcreate(request):
+    
 
 
 def index(request):
