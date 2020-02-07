@@ -3,7 +3,8 @@ from django.db import models
 # Create your models here.
 
 
-cath = (('elec', 'electronics'), ('veh', 'vehicles'), ('fash', 'fashion'), ('home', 'home_appliance'))
+cath = (('elec', 'electronics'), ('veh', 'vehicles'), ('fash', 'fashion'), (
+    'home', 'home_appliance'))
 
 
 class Store(models.Model):

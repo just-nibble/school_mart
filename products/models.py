@@ -8,7 +8,8 @@ fashion = (("me", "men's"), ("wo", "women's"))
 home_appliance = (('coo', 'cookers'), ('fa', 'fans'))
 
 
-cat = (('electronics', electronics), ('vehicles', vehicles), ('fashion', fashion), ('home appliance', home_appliance))
+cat = (('electronics', electronics), ('vehicles', vehicles), (
+    'fashion', fashion), ('home appliance', home_appliance))
 
 
 class Product(models.Model):

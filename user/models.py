@@ -14,7 +14,8 @@ class Profile(models.Model):
     email = models.EmailField(max_length=200)
     store = models.ForeignKey(Store, on_delete=models.CASCADE)
     school = models.CharField(max_length=200)
-    profile_pic = models.ImageField(default='default.jpg', upload_to='profile_pics')
+    profile_pic = models.ImageField(
+        default='default.jpg', upload_to='profile_pics')
 
     def __str__(self):
         return f'{self.user.username} Profile'
