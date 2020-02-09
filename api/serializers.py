@@ -29,7 +29,7 @@ class UserSerializer(serializers.ModelSerializer):
 class StoreSerializer(serializers.ModelSerializer):
     class Meta:
         model = Store
-        fields = ('name', 'location', 'category', 'phone_number')
+        fields = ('id','name', 'location', 'category', 'phone_number')
 
 
 class ProfileSerializer(serializers.ModelSerializer):

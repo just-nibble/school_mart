@@ -15,7 +15,7 @@ cat = (('electronics', electronics), ('vehicles', vehicles), (
 class Product(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField()
-    image = models.ImageField(upload_to='products/%Y/$m/$d', blank=True)
+    image = models.ImageField(default='default.jpg', upload_to='product_pic', blank=True)   
     catalogue = models.CharField(max_length=10, choices=cat, null=True)
 
     def __str__(self):

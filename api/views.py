@@ -9,21 +9,41 @@ from .serializers import ProfileSerializer, StoreSerializer, ProductSerializer, 
 
 # Create your views here.
 
-class UserAPIView(generics.ListAPIView):
+class UserAPIView(generics.ListCreateAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
 
-class ProfileAPIView(generics.ListAPIView):
+class DetailUserAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+
+class ProfileAPIView(generics.ListCreateAPIView):
     queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
 
 
-class StoreAPIView(generics.ListAPIView):
+class DetailProfileAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Profile.objects.all()
+    serializer_class = ProfileSerializer
+
+
+class StoreAPIView(generics.ListCreateAPIView):
     queryset = Store.objects.all()
     serializer_class = StoreSerializer
 
 
-class ProductAPIView(generics.ListAPIView):
+class DetailStoreAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Store.objects.all()
+    serializer_class = StoreSerializer
+
+
+class ProductAPIView(generics.ListCreateAPIView):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+
+
+class DetailProductAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
